@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<kart name="Franky the Pitchfork"
+      version="2"
+      model-file="franky_chassis.obj"
+      type="medium"
+      icon-file="icon.png"
+      shadow-file="shadow.png"
+      groups="standard"
+      rgb="0.55 0.2 0.15">
+
+    <wheels>
+        <front-right model="wheel.obj" position="0.45 0.22 0.55" />
+        <front-left  model="wheel.obj" position="-0.45 0.22 0.55" />
+        <rear-right  model="wheel.obj" position="0.55 0.32 -0.6" />
+        <rear-left   model="wheel.obj" position="-0.55 0.32 -0.6" />
+    </wheels>
+
+    <nitro-emitter>
+        <nitro-emitter-a position="0.22 0.6 0.45" />
+        <nitro-emitter-b position="-0.22 0.35 -0.65" />
+    </nitro-emitter>
+
+    <sounds>
+        <engine sound="default" />
+    </sounds>
+</kart>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<materials>
+    <material name="shadow.png"
+              shader="alphablend"
+              wrap-s="clamp"
+              wrap-t="clamp" />
+    <material name="icon.png"
+              shader="gui" />
+</materials>

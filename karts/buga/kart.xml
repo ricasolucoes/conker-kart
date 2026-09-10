@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<kart name="Buga the Cavedude"
+      version="2"
+      model-file="buga_chassis.obj"
+      type="heavy"
+      icon-file="icon.png"
+      shadow-file="shadow.png"
+      groups="standard"
+      rgb="0.85 0.62 0.45">
+
+    <wheels>
+        <front-right model="wheel.obj" position="0.56 0.28 0.65" />
+        <front-left  model="wheel.obj" position="-0.56 0.28 0.65" />
+        <rear-right  model="wheel.obj" position="0.58 0.30 -0.65" />
+        <rear-left   model="wheel.obj" position="-0.58 0.30 -0.65" />
+    </wheels>
+
+    <nitro-emitter>
+        <nitro-emitter-a position="-0.22 0.35 -0.75" />
+        <nitro-emitter-b position="0.22 0.35 -0.75" />
+    </nitro-emitter>
+
+    <sounds>
+        <engine sound="default" />
+    </sounds>
+</kart>
