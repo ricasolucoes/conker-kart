@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <kart name="Gregg the Grim Reaper"
-      version="2"
-      model-file="gregg_chassis.obj"
+      version="3"
+      model-file="gregg_chassis.spm"
       type="medium"
       icon-file="icon.png"
       shadow-file="shadow.png"
       groups="standard"
       rgb="0.1 0.95 0.95">
 
+    <animations straight="0"/>
     <wheels>
-        <front-right model="wheel.obj" position="0.48 0.24 0.65" />
-        <front-left  model="wheel.obj" position="-0.48 0.24 0.65" />
-        <rear-right  model="wheel.obj" position="0.52 0.26 -0.65" />
-        <rear-left   model="wheel.obj" position="-0.52 0.26 -0.65" />
+        <front-right model="wheel.spm" position="0.48 0.24 0.65" />
+        <front-left  model="wheel.spm" position="-0.48 0.24 0.65" />
+        <rear-right  model="wheel.spm" position="0.52 0.26 -0.65" />
+        <rear-left   model="wheel.spm" position="-0.52 0.26 -0.65" />
     </wheels>
 
     <nitro-emitter>
@@ -20,7 +21,5 @@
         <nitro-emitter-b position="0.2 0.3 -0.75" />
     </nitro-emitter>
 
-    <sounds>
-        <engine sound="default" />
-    </sounds>
+    <sounds engine="large"/>
 </kart>

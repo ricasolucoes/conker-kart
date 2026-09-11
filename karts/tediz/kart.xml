@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <kart name="Tediz Commander"
-      version="2"
-      model-file="tediz_chassis.obj"
+      version="3"
+      model-file="tediz_chassis.spm"
       type="heavy"
       icon-file="icon.png"
       shadow-file="shadow.png"
       groups="standard"
       rgb="0.28 0.35 0.22">
 
+    <animations straight="0"/>
     <wheels>
-        <front-right model="wheel.obj" position="0.55 0.26 0.7" />
-        <front-left  model="wheel.obj" position="-0.55 0.26 0.7" />
-        <rear-right  model="wheel.obj" position="0.58 0.28 -0.7" />
-        <rear-left   model="wheel.obj" position="-0.58 0.28 -0.7" />
+        <front-right model="wheel.spm" position="0.55 0.26 0.7" />
+        <front-left  model="wheel.spm" position="-0.55 0.26 0.7" />
+        <rear-right  model="wheel.spm" position="0.58 0.28 -0.7" />
+        <rear-left   model="wheel.spm" position="-0.58 0.28 -0.7" />
     </wheels>
 
     <nitro-emitter>
@@ -20,7 +21,5 @@
         <nitro-emitter-b position="0.25 0.45 -0.8" />
     </nitro-emitter>
 
-    <sounds>
-        <engine sound="default" />
-    </sounds>
+    <sounds engine="large"/>
 </kart>

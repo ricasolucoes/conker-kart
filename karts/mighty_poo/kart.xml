@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <kart name="The Great Mighty Poo"
-      version="2"
-      model-file="mighty_poo_chassis.obj"
+      version="3"
+      model-file="mighty_poo_chassis.spm"
       type="heavy"
       icon-file="icon.png"
       shadow-file="shadow.png"
       groups="standard"
       rgb="0.45 0.25 0.08">
 
+    <animations straight="0"/>
     <wheels>
-        <front-right model="wheel.obj" position="0.52 0.25 0.6" />
-        <front-left  model="wheel.obj" position="-0.52 0.25 0.6" />
-        <rear-right  model="wheel.obj" position="0.55 0.28 -0.65" />
-        <rear-left   model="wheel.obj" position="-0.55 0.28 -0.65" />
+        <front-right model="wheel.spm" position="0.52 0.25 0.6" />
+        <front-left  model="wheel.spm" position="-0.52 0.25 0.6" />
+        <rear-right  model="wheel.spm" position="0.55 0.28 -0.65" />
+        <rear-left   model="wheel.spm" position="-0.55 0.28 -0.65" />
     </wheels>
 
     <nitro-emitter>
@@ -20,7 +21,5 @@
         <nitro-emitter-b position="0.25 0.3 -0.7" />
     </nitro-emitter>
 
-    <sounds>
-        <engine sound="default" />
-    </sounds>
+    <sounds engine="large"/>
 </kart>

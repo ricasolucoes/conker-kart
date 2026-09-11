@@ -20,6 +20,8 @@ import math
 try:
     import bpy
     import bmesh
+    sys.path.append('/Users/sierra/Dev/Jogos/OpenSources/stk-blender/io_scene_spm')
+    import export_spm
 except ImportError:
     print("Error: Run inside Blender: blender --background --python generate_models.py")
     sys.exit(1)
@@ -39,6 +41,24 @@ def create_mat(name, color, roughness=0.4, metallic=0.0):
         if "Metallic" in bsdf.inputs:
             bsdf.inputs["Metallic"].default_value = metallic
     return mat
+
+def export_spm_mesh(obj, filepath):
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    bpy.ops.object.select_all(action='DESELECT')
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    spm_params = {
+        'selection-type': 'selected',
+        'local-space': True,
+        'apply-modifiers': True,
+        'keyframes-only': True,
+        'export-normal': True,
+        'export-vcolor': False,
+        'export-tangent': False,
+        'static-mesh-frame': 1
+    }
+    export_spm.writeSPMFile(filepath, spm_params)
+    print(f"Exported SPM: {filepath}")
 
 def export_obj(obj, filepath):
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -576,9 +596,12 @@ def main():
         # Build & Export wheel
         wheel = build_wheel()
         export_obj(wheel, os.path.join(kart_dir, "wheel.obj"))
+        export_spm_mesh(wheel, os.path.join(kart_dir, "wheel.spm"))
         # Build & Export character chassis
         chassis = builder_fn()
         export_obj(chassis, os.path.join(kart_dir, obj_name))
+        spm_name = obj_name.replace(".obj", ".spm")
+        export_spm_mesh(chassis, os.path.join(kart_dir, spm_name))
 
     print("ALL 10 CHARACTERS GENERATED IN BLENDER SUCCESSFULLY!")
 

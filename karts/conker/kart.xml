@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <kart name="Conker Nitro Rod"
-      version="2"
-      model-file="conker_chassis.obj"
+      version="3"
+      model-file="conker_chassis.spm"
       type="medium"
       icon-file="icon.png"
       shadow-file="shadow.png"
       groups="standard"
       rgb="1.0 0.45 0.05">
 
+    <animations straight="0"/>
     <wheels>
-        <front-right model="wheel.obj" position="0.5 0.25 0.65" />
-        <front-left  model="wheel.obj" position="-0.5 0.25 0.65" />
-        <rear-right  model="wheel.obj" position="0.55 0.28 -0.65" />
-        <rear-left   model="wheel.obj" position="-0.55 0.28 -0.65" />
+        <front-right model="wheel.spm" position="0.5 0.25 0.65" />
+        <front-left  model="wheel.spm" position="-0.5 0.25 0.65" />
+        <rear-right  model="wheel.spm" position="0.55 0.28 -0.65" />
+        <rear-left   model="wheel.spm" position="-0.55 0.28 -0.65" />
     </wheels>
 
     <nitro-emitter>
@@ -20,7 +21,5 @@
         <nitro-emitter-b position="0.22 0.32 -0.85" />
     </nitro-emitter>
 
-    <sounds>
-        <engine sound="default" />
-    </sounds>
+    <sounds engine="large"/>
 </kart>

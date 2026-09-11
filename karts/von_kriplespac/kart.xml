@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
 <kart name="Prof Von Kriplespac"
-      version="2"
-      model-file="kriplespac_chassis.obj"
+      version="3"
+      model-file="kriplespac_chassis.spm"
       type="light"
       icon-file="icon.png"
       shadow-file="shadow.png"
       groups="standard"
       rgb="0.1 0.9 0.95">
 
+    <animations straight="0"/>
     <wheels>
-        <front-right model="wheel.obj" position="0.5 0.22 0.55" />
-        <front-left  model="wheel.obj" position="-0.5 0.22 0.55" />
-        <rear-right  model="wheel.obj" position="0.5 0.24 -0.55" />
-        <rear-left   model="wheel.obj" position="-0.5 0.24 -0.55" />
+        <front-right model="wheel.spm" position="0.5 0.22 0.55" />
+        <front-left  model="wheel.spm" position="-0.5 0.22 0.55" />
+        <rear-right  model="wheel.spm" position="0.5 0.24 -0.55" />
+        <rear-left   model="wheel.spm" position="-0.5 0.24 -0.55" />
     </wheels>
 
     <nitro-emitter>
@@ -20,7 +21,5 @@
         <nitro-emitter-b position="0.3 0.22 -0.6" />
     </nitro-emitter>
 
-    <sounds>
-        <engine sound="default" />
-    </sounds>
+    <sounds engine="large"/>
 </kart>
